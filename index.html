@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multimedia Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="logo" href="#top">◆ Playground</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav id="menu">
+      <a href="#images">Images</a>
+      <a href="#video">Video</a>
+      <a href="#audio">Audio</a>
+      <a href="#canvas">Interactive</a>
+    </nav>
+  </header>
+
+  <!-- HERO with CSS animation -->
+  <section class="hero" id="top">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="hero-text reveal">
+      <h1>Multimedia <span class="grad">Playground</span></h1>
+      <p>Audio, video, images, animation and interactive graphics — in one responsive page.</p>
+      <a class="btn" href="#images">Explore ↓</a>
+    </div>
+  </section>
+
+  <!-- IMAGES -->
+  <section id="images" class="section">
+    <h2 class="reveal">Image Gallery</h2>
+    <p class="sub reveal">Click any picture to open it larger.</p>
+    <div class="gallery">
+      <figure class="reveal"><img src="https://picsum.photos/seed/mountain/600/400" alt="Mountain landscape" loading="lazy"><figcaption>Mountains</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/ocean/600/400" alt="Ocean view" loading="lazy"><figcaption>Ocean</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/forest/600/400" alt="Forest path" loading="lazy"><figcaption>Forest</figcaption></figure>
+      <figure class="reveal"><img src="https://picsum.photos/seed/city/600/400" alt="City skyline" loading="lazy"><figcaption>City</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox"><img alt=""><span class="close">✕</span></div>
+
+  <!-- VIDEO -->
+  <section id="video" class="section alt">
+    <h2 class="reveal">Video</h2>
+    <div class="video-wrap reveal">
+      <video id="vid" controls playsinline poster="https://picsum.photos/seed/video/1000/560">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="controls reveal">
+      <button class="btn small" id="playBtn">▶ Play</button>
+      <button class="btn small" id="speedBtn">Speed 1×</button>
+    </div>
+  </section>
+
+  <!-- AUDIO -->
+  <section id="audio" class="section">
+    <h2 class="reveal">Audio</h2>
+    <div class="audio-card reveal">
+      <p>Audio clip:</p>
+      <audio controls src="chime.wav"></audio>
+      <div class="bars" id="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <p class="sub reveal">Play the mini piano (click, tap, or press keys A S D F G H J):</p>
+    <div class="piano reveal" id="piano"></div>
+  </section>
+
+  <!-- INTERACTIVE CANVAS -->
+  <section id="canvas" class="section alt">
+    <h2 class="reveal">Interactive Graphics</h2>
+    <p class="sub reveal">Move your mouse / finger over the canvas. Click or tap to burst particles.</p>
+    <canvas id="cv"></canvas>
+    <div class="controls">
+      <button class="btn small" id="clearBtn">Clear</button>
+      <label>Color <input type="color" id="colorPick" value="#7c5cff"></label>
+    </div>
+  </section>
+
+  <footer>Built with HTML, CSS &amp; JavaScript</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
